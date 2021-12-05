@@ -1,0 +1,163 @@
+.headingContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.headingContainer > div {
+  padding: 20px 300px;
+  background-color: #e6e4ff;
+  margin-top: 0px;
+  border-radius: 0.5rem;
+  font-size: 20px;
+}
+.headingContainer > div:hover {
+  background-color: #6c63ff;
+  color: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+.productDetails {
+  text-align: center;
+}
+.form {
+  display: grid;
+  grid-template-areas:
+    "a . b"
+    "c . d"
+    "e . f"
+    "g . h";
+
+  width: 50%;
+  margin: auto;
+}
+.form > div:nth-of-type(1) {
+  grid-area: a;
+}
+.form > div:nth-of-type(2) {
+  grid-area: b;
+}
+.form > div:nth-of-type(3) {
+  grid-area: c;
+}
+.form > div:nth-of-type(4) {
+  grid-area: d;
+}
+.form > div:nth-of-type(5) {
+  grid-area: e;
+}
+.form > div:nth-of-type(6) {
+  grid-area: f;
+}
+.form > div:nth-of-type(6) > * {
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 15px;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.form > div > * {
+  width: 350px;
+  margin: 25px;
+}
+.signUpSvg > * {
+  width: 13%;
+  height: 18%;
+  margin-bottom: 35px;
+  margin-top: 45px;
+}
+.info {
+  position: absolute;
+  top: 275px;
+  left: 413px;
+}
+.list {
+  margin: 3% 0%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  padding: 6%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.image > img {
+  width: 250px;
+  height: 140px;
+}
+.image {
+  text-align: center;
+  margin: 5% 0;
+}
+.text span:nth-of-type(2) {
+  font-weight: 600;
+  font-size: 16px;
+}
+.text {
+  padding: 1%;
+  margin: 2% 2% 3% 7%;
+}
+.text span:nth-of-type(2):hover {
+  color: #6c63ff;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s;
+  transform: translateX(6px);
+}
+
+.sub_container {
+  width: 93%;
+  margin: auto;
+  display: flex;
+  grid-template-columns: repeat(4, 20%);
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.sub_container2 {
+  width: 93%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 30px;
+}
+.sub_container2 h4 {
+  margin: auto;
+  font-size: 25px !important;
+  color: rgb(6, 112, 6);
+}
+
+.list2 {
+  margin: 3% 0%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  padding: 6%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 45%;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.listData {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondDiv div {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.sub_container h4 {
+  margin: auto;
+  font-size: 25px !important;
+  color: red;
+  margin-bottom: 25px;
+}

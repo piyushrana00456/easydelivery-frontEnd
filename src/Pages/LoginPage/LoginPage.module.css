@@ -1,0 +1,36 @@
+body {
+  background-color: #f0f2f7;
+}
+
+.container {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+}
+.login_container > div {
+  margin: 30px;
+}
+.button_box > * {
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 15px;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.login_container > div > * {
+  width: 336px;
+}
+.login_container > div:nth-of-type(3) {
+  width: 199px;
+  margin: auto;
+}
+.loginSvg > * {
+  width: 22%;
+  height: 18%;
+}
+.login_container {
+  margin-top: 40px;
+}
