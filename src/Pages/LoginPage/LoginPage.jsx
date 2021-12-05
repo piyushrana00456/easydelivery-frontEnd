@@ -34,8 +34,8 @@ export const LoginPage = () => {
       dispatch(loginLoading());
       let url =
         client === "user"
-          ? "http://localhost:5000/user-login"
-          : "http://localhost:5000/driver-login";
+          ? "https://easy-delivery-backends.herokuapp.com/user-login"
+          : "https://easy-delivery-backends.herokuapp.com/driver-login";
       await axios
         .post(url, {
           email: email,

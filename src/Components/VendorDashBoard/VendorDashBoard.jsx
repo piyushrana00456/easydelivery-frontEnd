@@ -76,7 +76,7 @@ export const VendorDashBoard = () => {
   const addPackage = async (el) => {
     try {
       await axios
-        .post("http://localhost:5000/package", {
+        .post("https://easy-delivery-backends.herokuapp.com/package", {
           from: el.from,
           to: el.to,
           packageName: el.name,
@@ -85,6 +85,7 @@ export const VendorDashBoard = () => {
           status: false,
           driverId: [],
         })
+
         .then((res) => {
           localStorage.setItem("package", JSON.stringify(res.data.data));
           setProd(res.data.data);
@@ -98,21 +99,27 @@ export const VendorDashBoard = () => {
   const waitingData = async () => {
     let id = JSON.parse(localStorage.getItem("package"));
     if (id === null || id === undefined) return;
-    await axios.get(`http://localhost:5000/package/${id._id}`).then((res) => {
-      console.log(res);
-      setProd(res.data.data[0]);
-    });
+    await axios
+      .get(` https://easy-delivery-backends.herokuapp.com/package/${id._id}`)
+      .then((res) => {
+        console.log(res);
+        setProd(res.data.data[0]);
+      });
   };
 
   const handleDetails = async () => {
-    await axios.get("http://localhost:5000/package").then((e) => {
-      console.log(e.data.data);
-    });
+    await axios
+      .get(" https://easy-delivery-backends.herokuapp.com/package")
+      .then((e) => {
+        console.log(e.data.data);
+      });
   };
 
   const loadData = async () => {
     await axios
-      .get(`http://localhost:5000/package/${packageDetail._id}`)
+      .get(
+        ` https://easy-delivery-backends.herokuapp.com/package/${packageDetail._id}`
+      )
       .then((e) => {
         setMainData(e.data.data);
         console.log("item", e.data);

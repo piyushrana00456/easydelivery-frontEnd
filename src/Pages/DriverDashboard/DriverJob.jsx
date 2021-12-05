@@ -13,7 +13,9 @@ export const DriverJobs = () => {
   const fetchUser = async () => {
     let userId = JSON.parse(localStorage.getItem("user"));
     await axios
-      .get(`http://localhost:5000/driver/${userId?.user?._id}`)
+      .get(
+        `https://easy-delivery-backends.herokuapp.com/driver/${userId?.user?._id}`
+      )
       .then((res) => {
         setDriver(res.data.data[0]);
       });
@@ -22,15 +24,18 @@ export const DriverJobs = () => {
   const declineJob = async (id) => {
     let userId = JSON.parse(localStorage.getItem("user"));
     await axios
-      .patch(`http://localhost:5000/driver/remove/${userId?.user?._id}`, {
-        jobs: [id],
-      })
+      .patch(
+        `https://easy-delivery-backends.herokuapp.com/driver/remove/${userId?.user?._id}`,
+        {
+          jobs: [id],
+        }
+      )
       .then((res) => {
         // console.log(res.data);
         fetchUser();
       });
     return await axios
-      .patch(`http://localhost:5000/package/${id}`, {
+      .patch(`https://easy-delivery-backends.herokuapp.com/package/${id}`, {
         driverId: userId?.user?._id,
       })
       .then((res) => console.log(res.data));

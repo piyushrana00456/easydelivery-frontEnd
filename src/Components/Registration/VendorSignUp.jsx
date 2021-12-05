@@ -69,7 +69,7 @@ export const VendorSignUp = () => {
     try {
       dispatch(registerLoading());
       await axios
-        .post("http://localhost:5000/user-register", {
+        .post("https://easy-delivery-backends.herokuapp.com/user-register", {
           email: el.email,
           name: "name",
           aadhar: el.aadhar,
@@ -151,6 +151,3 @@ export const VendorSignUp = () => {
     </div>
   );
 };
-
-
-

@@ -70,7 +70,7 @@ export const DriverSignUp = () => {
     try {
       dispatch(registerLoading());
       await axios
-        .post("http://localhost:5000/driver-register", {
+        .post("https://easy-delivery-backends.herokuapp.com/driver-register", {
           email: el.email,
           name: el.name,
           aadhar: el.aadhar,

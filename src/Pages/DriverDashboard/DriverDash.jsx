@@ -12,10 +12,12 @@ export const DriverDash = () => {
   const { user } = useSelector((state) => state.auth);
 
   const fetchData = async () => {
-    await axios.get("http://localhost:5000/package").then((res) => {
-      console.log("Called");
-      setData(res.data.data);
-    });
+    await axios
+      .get("https://easy-delivery-backends.herokuapp.com/package")
+      .then((res) => {
+        console.log("Called");
+        setData(res.data.data);
+      });
   };
 
   React.useEffect(() => {
@@ -49,16 +51,19 @@ export const DriverDash = () => {
   const handleClick = async (id) => {
     let userId = JSON.parse(localStorage.getItem("user"));
     await axios
-      .patch(`http://localhost:5000/package/${id}`, {
+      .patch(`https://easy-delivery-backends.herokuapp.com/package/${id}`, {
         driverId: userId?.user?._id,
       })
       .then((res) => {
         // console.log(res.data);
       });
     await axios
-      .patch(`http://localhost:5000/driver/${user._id}`, {
-        jobs: [id],
-      })
+      .patch(
+        `https://easy-delivery-backends.herokuapp.com/driver/${user._id}`,
+        {
+          jobs: [id],
+        }
+      )
       .then((res) => {
         //  console.log("Whole data", data[0].status);
       });
